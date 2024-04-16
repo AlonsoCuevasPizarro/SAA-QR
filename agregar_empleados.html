@@ -10,6 +10,19 @@
     <title>SAA-QR</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="css/styles.css" rel="stylesheet" />
+    <!-- COLUMNA A LA IZQUIERDA -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="
+    sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="stylesheet" rel="css/styles.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script defer src="js/generador-qr.js"></script>
+    <!-- COLUMNA A LA IZQUIERDA -->
+
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -193,6 +206,15 @@
 
                         <!--########################################################################################################-->
 
+                        <!--Lector QR -->
+                        <a class="nav-link" href="lector_qr.html">
+                            <div class="sb-nav-link-icon"><i class="fa fa-qrcode"></i></div>
+                            Lector QR
+                        </a>
+                        <!--Lector QR -->
+
+                        <!--########################################################################################################-->
+
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
@@ -205,48 +227,67 @@
         <!--########################################################################################################-->
 
         <div id="layoutSidenav_content">
-
             <main>
-
                 <div class="container-fluid px-4">
-
                     <div class="row">
 
-                        <div class="col-xl-6">
+                        <div class="col">
+                            <div class="columnleft">
+                                <section class="form-register">
+                                    <h4>Registro de Empleados</h4>
+                                    <input class="controls" type="text" name="id" id="id" placeholder="Ingrese Rut">
+                                    <input class="controls" type="text" name="nombres" id="nombres"
+                                        placeholder="Ingrese su Nombre">
+                                    <input class="controls" type="text" name="apellidos" id="apellidos"
+                                        placeholder="Ingrese su Apellido">
+                                    <input class="controls" type="text" name="telefono" id="telefonp"
+                                        placeholder="Ingrese su Celular: +56#########">
+                                    <input class="controls" type="text" name="tipo" id="tipo"
+                                        placeholder="Ingrese Interno o Externo">
+                                    <input class="controls" type="text" name="area" id="area"
+                                        placeholder="Ingrese Area">
+                                    <input class="controls" type="text" name="jornada" id="jornada"
+                                        placeholder="Ingrese Jornada">
+                                    <input class="botons" type="submit" value="Registrar">
+                                </section>
+                            </div>
+                        </div>
 
-                            <h1>Agregar Empleados</h1>
-                            <h1> en esta pagina podras agregar empleados y asignarle un codigo QR</h1>
-                            <h1>todos los campos del trabajador deben ser obligatorios, si falta uno no se podra agregar
-                                al trabajador</h1>
-                            <h1>al apretar el boton agregar aparecera un mensaje que diga</h1>
-                            <h1>ESTA SEGURO DE AGREGAR A ESTE TRABAJADOR</h1>
-
+                        <div class="col">
+                            <div class="columnright">
+                                <div class="contenedor">
+                                    <form action="" id="formulario" class="formulario">
+                                        <input type="text" id="link" placeholder="Escribe el texto o URL" />
+                                        <button class="btn">Generar QR</button>
+                                    </form>
+                                    <div id="contenedorQR" class="contenedorQR"></div>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
-
                 </div>
-
             </main>
+        </div>
 
-            <!--########################################################################################################-->
-
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; SAA-QR 2024</div>
-                        <div>
-                            <a href="#">Politicas de Privacidad</a>
-                            &middot;
-                            <a href="#">Terminos &amp; Condiciones</a>
-                        </div>
+        <!--########################################################################################################-->
+        <!--
+        <footer class="py-4 bg-light mt-auto">
+            <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                    <div class="text-muted">Copyright &copy; SAA-QR 2024</div>
+                    <div>
+                        <a href="#">Politicas de Privacidad</a>
+                        &middot;
+                        <a href="#">Terminos &amp; Condiciones</a>
                     </div>
                 </div>
-            </footer>
+            </div>
+        </footer>
+        -->
+        <!--########################################################################################################-->
 
-            <!--########################################################################################################-->
-
-        </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         crossorigin="anonymous"></script>
